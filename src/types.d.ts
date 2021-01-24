@@ -32,7 +32,11 @@ declare interface EconomyUtils {
   addBal(profileID: string, coinsToAdd: number): Promise<number | void>;
   removeBal(profileID: string, coinsToRemove: number): Promise<number | void>;
   deleteProfile(profileID: string): Promise<void>;
-  registerProfile(profileData: { _id: string, balance?: number, inventory?: object[] }): Promise<Document<any> | void>;
+  registerProfile(profileData: {
+    _id: string;
+    balance?: number;
+    inventory?: object[];
+  }): Promise<Document<any> | void>;
 }
 declare type permissions = BitFieldResolvable<PermissionString>[];
 declare type Event = (

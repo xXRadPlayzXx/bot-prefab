@@ -17,18 +17,20 @@ git clone https://github.com/xXRadPlayzXx/bot-prefab
 
 ### 2. Setting up node packages
 
-Run the following command in your CLI: 
+Run the following command in your CLI:
+
 ```bash
 npm install
 ```
 
 ### 3. Setup environment variables
 
-Rename .env.example to .env and replace the place holders to their actual value 
+Rename .env.example to .env and replace the place holders to their actual value
 
 ### 4. Starting your bot
 
 After you filled in the environment variables, You can start your bot using this command:
+
 ```bash
 npm run dev
 ```
