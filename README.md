@@ -5,7 +5,7 @@
 
 ## What is this?
 
-This is a feature-rich bot prefab to make creating bots a bit easier, it has a fairly simple command and event handler and plenty of commands ([`src/commands`](src/commands)). I made this because I don't think writing the whole handler yourself is neccesary to make a Discord bot, although you should at least try to understand how it all works to make it easier to debug.\
+This is a feature-rich bot prefab to make creating bots a bit easier, it has a fairly simple command and event handler and plenty of commands ([`src/commands`](src/commands)). I made this because I don't think writing the whole handler yourself is neccesary to make a Discord bot, although you should at least try to understand how it all works to make it easier to debug.
 
 ## Up coming features
 
@@ -19,5 +19,6 @@ This is a feature-rich bot prefab to make creating bots a bit easier, it has a f
 ## Credits
 
 Credits to canta for this README.md i just stole it.\
-His discord: canta#5556.\
-His server: https://discord.gg/j6SPS8227S
+canta's discord: canta#5556\
+canta's github: https://github.com/canta-slaus\
+canta's server: https://discord.gg/j6SPS8227S
