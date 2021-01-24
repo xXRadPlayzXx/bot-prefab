@@ -18,6 +18,6 @@ This is a feature-rich bot prefab to make creating bots a bit easier, it has a f
 
 ## Credits
 
-Credits to canta for this README.md i just stole it.\
+Credits to canta for this README.md i just stole it.
 His discord: canta#5556\
 His server: https://discord.gg/j6SPS8227S
