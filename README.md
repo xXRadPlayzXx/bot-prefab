@@ -7,7 +7,7 @@
 
 This is a feature-rich bot prefab to make creating bots a bit easier, it has a fairly simple command and event handler and plenty of commands ([`src/commands`](src/commands)). I made this because I don't think writing the whole handler yourself is neccesary to make a Discord bot, although you should at least try to understand how it all works to make it easier to debug.\
 
-## Available Features
+## Up coming features
 
 - Per server prefixes
 - Per server command disabling/enabling and customizable per server command permissions
