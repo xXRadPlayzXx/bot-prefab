@@ -1,7 +1,7 @@
-import { Message } from "discord.js";
-import { Model } from "mongoose";
-import { capitalize } from "../functions";
-import { Command, Event } from "../types";
+import { Message } from 'discord.js';
+import { Model } from 'mongoose';
+import { capitalize } from '../functions';
+import { Command, Event } from '../types';
 
 const guildPrefixes = {}; // { 'guildId' : 'prefix' }
 const messageEvent: Event = async (client, message: Message) => {
@@ -14,11 +14,11 @@ const messageEvent: Event = async (client, message: Message) => {
   if (message.content.match(mentionRegex)) {
     await client.sendEmbed(
       {
-        title: "Prefix",
+        title: 'Prefix',
         description: `My prefix for **${guildName}** is **\`${guildPrefix}\`**.`,
       },
       message,
-      false
+      false,
     );
   }
 
@@ -43,7 +43,7 @@ const messageEvent: Event = async (client, message: Message) => {
         description: `I can't find the command \`${commandName}\`.`,
       },
       message,
-      true
+      true,
     );
   }
   if (cmd.guildOwnerOnly && message.member?.id !== message.guild?.owner?.id) {
@@ -53,7 +53,7 @@ const messageEvent: Event = async (client, message: Message) => {
         description: `You must be **${guildName}**'s owner in order to use this command.`,
       },
       message,
-      true
+      true,
     );
   }
   if (cmd.devOnly && !client.developers.includes(message.author.id)) {
@@ -63,7 +63,7 @@ const messageEvent: Event = async (client, message: Message) => {
         description: `You must be one of the developers in order to use this command.`,
       },
       message,
-      true
+      true,
     );
   }
   if (cmd._reqPerms) {
@@ -76,11 +76,11 @@ const messageEvent: Event = async (client, message: Message) => {
           {
             title: `Missing Permissions`,
             description: `In order to use this command you must have the following permission${
-              cmd._reqPerms.length === 1 ? "" : "s"
-            }: \`${cmd._reqPerms.join(", ")}\``,
+              cmd._reqPerms.length === 1 ? '' : 's'
+            }: \`${cmd._reqPerms.join(', ')}\``,
           },
           message,
-          true
+          true,
         );
       }
     }
@@ -93,11 +93,11 @@ const messageEvent: Event = async (client, message: Message) => {
       {
         title: `Incorrect Syntax`,
         description: `Please consider using \`${prefix}${cmd.name}${
-          cmd._syntax !== undefined ? ` ${cmd._syntax}` : ""
+          cmd._syntax !== undefined ? ` ${cmd._syntax}` : ''
         }\``,
       },
       message,
-      true
+      true,
     );
     return;
   }
@@ -115,14 +115,14 @@ const messageEvent: Event = async (client, message: Message) => {
         description: `An unknown error occured, please report this to the developers: ***${err}***`,
       },
       message,
-      true
+      true,
     );
     client.logger.error(err);
   } finally {
     client.logger.info(
       `Executed the command "${cmd.name || commandName}" by ${
         message.author.username
-      } on ${guildName}`
+      } on ${guildName}`,
     );
   }
 };

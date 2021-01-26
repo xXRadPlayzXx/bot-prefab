@@ -1,6 +1,6 @@
-import { BitFieldResolvable, Message, PermissionString } from "discord.js";
-import { Document } from "mongoose";
-import RadClient from "./client";
+import { BitFieldResolvable, Message, PermissionString } from 'discord.js';
+import { Document } from 'mongoose';
+import RadClient from './client';
 declare interface RadLogger {
   log(message: string): Promise<string>;
   success(message: string): Promise<string>;
@@ -46,9 +46,9 @@ declare type Event = (
 declare type cmdRunFn = (
   message: Message,
   args: string[],
-  client: RadClient
+  client: RadClient,
 ) => Promise<void | any> | void | any;
-declare module "discord.js" {
+declare module 'discord.js' {
   interface Client {
     commands: Collection<string, object>; // change this if u want
   }

@@ -1,5 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from 'fs';
+import * as path from 'path';
 
 const capitalize = (str: string): string => {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -14,8 +14,8 @@ const loadDir = async (
   dirPath: string,
   done: (
     err: Error | null,
-    filePaths: string[]
-  ) => Promise<void | any> | void | any
+    filePaths: string[],
+  ) => Promise<void | any> | void | any,
 ) => {
   let results: string[] = [];
   fs.readdir(dirPath, function (err, list) {

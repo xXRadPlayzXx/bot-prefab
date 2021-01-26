@@ -1,7 +1,7 @@
-import { Intents } from "discord.js";
-import { config as loadEnv } from "dotenv";
+import { Intents } from 'discord.js';
+import { config as loadEnv } from 'dotenv';
 
-import Client from "./client";
+import Client from './client';
 
 loadEnv();
 

@@ -1,5 +1,5 @@
-import { Schema, model, SchemaTypes, Model } from "mongoose";
-import { guildConfig, Profile } from "../types";
+import { Schema, model, SchemaTypes, Model } from 'mongoose';
+import { guildConfig, Profile } from '../types';
 
 const reqString = {
   type: SchemaTypes.String,
@@ -26,8 +26,8 @@ const guildConfigSchema: Schema = new Schema({
 });
 
 const guildConfigs: Model<guildConfig> = model<guildConfig>(
-  "guild-configs",
-  guildConfigSchema
+  'guild-configs',
+  guildConfigSchema,
 );
 
 const profilesSchema: Schema = new Schema({
@@ -39,6 +39,6 @@ const profilesSchema: Schema = new Schema({
     default: [],
   },
 });
-const profiles: Model<Profile> = model<Profile>("profiles", profilesSchema);
+const profiles: Model<Profile> = model<Profile>('profiles', profilesSchema);
 
 export { guildConfigs, profiles };

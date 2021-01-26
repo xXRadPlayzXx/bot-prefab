@@ -1,4 +1,4 @@
-import { Command } from "../types";
+import { Command } from '../types';
 
 const TestCommand: Command = {
   maxArgs: 0,
@@ -6,7 +6,7 @@ const TestCommand: Command = {
     await client.economy
       .removeBal(message.author.id, 2)
       .catch(async (err) => {
-        return await message.reply("No profile found");
+        return await message.reply('No profile found');
       })
       .then((newCoins) => {
         console.log(newCoins);

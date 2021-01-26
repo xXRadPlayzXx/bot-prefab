@@ -1,4 +1,4 @@
-import { Command } from "../types";
+import { Command } from '../types';
 
 const createProfileCmd: Command = {
   callback: async (message, args, bot) => {
